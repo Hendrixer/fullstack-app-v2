@@ -1,0 +1,49 @@
+.authform {
+  composes: glass from global;
+  width: 600px;
+  overflow: hidden;
+}
+
+.header {
+  padding: 10px 40px;
+}
+
+.body {
+  padding: 20px 40px;
+}
+
+.input-box {
+  margin-bottom: 20px;
+}
+
+.input {
+  border: var(--glass-border);
+  background: rgba(255, 255, 255, 0.5);
+  outline: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 18px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.button {
+  background-color: white;
+  border: var(--glass-border);
+  outline: 0px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.button:active {
+  transform: scale(1);
+}

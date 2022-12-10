@@ -1,0 +1,42 @@
+:root {
+  --glass-border: 1px solid rgba(255, 255, 255, 0.4);
+  --glass-filter: blur(16px) saturate(200%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+main {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass {
+  backdrop-filter: var(--glass-filter);
+  -webkit-backdrop-filter: var(--glass-filter);
+  color: black;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: var(--glass-border);
+  border-radius: 12px;
+}
+
+.full-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.center-children {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

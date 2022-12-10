@@ -1,8 +1,10 @@
 import 'css-reset-and-normalize'
-import './global.css'
+import '@/styles/global.css'
 import { Inter } from '@next/font/google'
 
-const inter = Inter()
+const inter = Inter({
+  variable: '--font-inter',
+})
 
 export default function RootLayout({ children }) {
   return (
