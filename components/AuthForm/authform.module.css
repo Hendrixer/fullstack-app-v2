@@ -6,6 +6,7 @@
 
 .header {
   padding: 10px 40px;
+  border-bottom: var(--glass-border);
 }
 
 .body {
@@ -27,23 +28,8 @@
   margin-top: 15px;
 }
 
-.button {
-  background-color: white;
-  border: var(--glass-border);
-  outline: 0px;
-  padding: 8px 16px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.button:hover {
-  transform: scale(1.1);
-}
-
-.button:active {
-  transform: scale(1);
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

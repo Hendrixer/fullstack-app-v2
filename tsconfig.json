@@ -24,6 +24,7 @@
       "@/components/*": ["components/*"],
       "@/hooks/*": ["hooks/*"],
       "@/lib/*": ["lib/*"],
+      "@/ui/*": ["ui/*"],
       "@/styles/*": ["styles/*"],
       "@/prisma/*": ["prisma/*"]
     }

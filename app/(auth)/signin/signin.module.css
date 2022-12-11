@@ -1,0 +1,18 @@
+.signin {
+  composes: full-screen from global;
+  composes: center-children from global;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffb399;
+  background-image: radial-gradient(
+      at 74% 78%,
+      hsla(327, 82%, 69%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 58% 2%, hsla(264, 68%, 60%, 1) 0px, transparent 50%),
+    radial-gradient(at 41% 96%, hsla(30, 90%, 79%, 1) 0px, transparent 50%),
+    radial-gradient(at 66% 40%, hsla(63, 92%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 59% 56%, hsla(9, 73%, 78%, 1) 0px, transparent 50%),
+    radial-gradient(at 49% 85%, hsla(179, 84%, 78%, 1) 0px, transparent 50%),
+    radial-gradient(at 34% 73%, hsla(227, 96%, 63%, 1) 0px, transparent 50%);
+}

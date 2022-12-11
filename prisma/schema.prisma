@@ -11,25 +11,14 @@ datasource db {
 }
 
 
-model Account {
-  id    String     @id @default(uuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  userId  String   @unique
-  user    User    @relation(fields: [userId], references: [id])
-
-  backgroundImage String?
-  backgroundColor String
-}
-
 model User {
   id    String     @id @default(uuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   email String  @unique
+  password String
   name  String?
   posts Post[]
-  account Account?
   feed Feed?
 
   followers User[]  @relation("UserFollows")

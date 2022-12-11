@@ -1,0 +1,18 @@
+.register {
+  composes: full-screen from global;
+  composes: center-children from global;
+  position: relative;
+  overflow: hidden;
+  background-color: #fdff99;
+  background-image: radial-gradient(
+      at 65% 72%,
+      hsla(200, 70%, 67%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 7% 7%, hsla(292, 96%, 64%, 1) 0px, transparent 50%),
+    radial-gradient(at 55% 74%, hsla(17, 81%, 66%, 1) 0px, transparent 50%),
+    radial-gradient(at 15% 98%, hsla(47, 68%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 62% 99%, hsla(130, 91%, 65%, 1) 0px, transparent 50%),
+    radial-gradient(at 81% 26%, hsla(263, 88%, 71%, 1) 0px, transparent 50%),
+    radial-gradient(at 17% 99%, hsla(21, 95%, 65%, 1) 0px, transparent 50%);
+}
