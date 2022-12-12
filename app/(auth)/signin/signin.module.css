@@ -3,16 +3,13 @@
   composes: center-children from global;
   position: relative;
   overflow: hidden;
-  background-color: #ffb399;
+  background-color: hsla(322, 0%, 0%, 1);
   background-image: radial-gradient(
-      at 74% 78%,
-      hsla(327, 82%, 69%, 1) 0px,
+      at 22% 13%,
+      hsla(197, 88%, 77%, 1) 0px,
       transparent 50%
     ),
-    radial-gradient(at 58% 2%, hsla(264, 68%, 60%, 1) 0px, transparent 50%),
-    radial-gradient(at 41% 96%, hsla(30, 90%, 79%, 1) 0px, transparent 50%),
-    radial-gradient(at 66% 40%, hsla(63, 92%, 73%, 1) 0px, transparent 50%),
-    radial-gradient(at 59% 56%, hsla(9, 73%, 78%, 1) 0px, transparent 50%),
-    radial-gradient(at 49% 85%, hsla(179, 84%, 78%, 1) 0px, transparent 50%),
-    radial-gradient(at 34% 73%, hsla(227, 96%, 63%, 1) 0px, transparent 50%);
+    radial-gradient(at 59% 3%, hsla(312, 92%, 64%, 1) 0px, transparent 50%),
+    radial-gradient(at 27% 59%, hsla(250, 63%, 66%, 1) 0px, transparent 50%),
+    radial-gradient(at 81% 0%, hsla(18, 79%, 76%, 1) 0px, transparent 50%);
 }

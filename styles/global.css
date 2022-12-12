@@ -1,5 +1,5 @@
 :root {
-  --glass-border: 1px solid rgba(255, 255, 255, 0.7);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.3);
   --glass-filter: blur(16px) saturate(200%);
 }
 

@@ -6,11 +6,14 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-export default function RootLayout({ children }) {
+export default function DashboardRootLayout({ children }) {
   return (
     <html lang="en" className={inter.className}>
       <head />
-      <body>{children}</body>
+      <body>
+        dash
+        {children}
+      </body>
     </html>
   )
 }
