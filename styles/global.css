@@ -31,17 +31,6 @@ a:visited {
   color: rgb(138, 60, 222);
 }
 
-.glass {
-  backdrop-filter: var(--glass-filter);
-  -webkit-backdrop-filter: var(--glass-filter);
-  color: black;
-  background-color: rgba(255, 255, 255, 0.55);
-  border: var(--glass-border);
-  border-radius: 12px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-}
-
 .full-screen {
   width: 100vw;
   height: 100vh;
