@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { db } from '@/lib/db'
 import { createJWT, hashPassword } from '@/lib/auth'
+import { serialize } from 'cookie'
 
 export default async function register(
   req: NextApiRequest,
@@ -14,9 +15,13 @@ export default async function register(
       },
     })
 
-    const jwt = createJWT(user)
+    const jwt = await createJWT(user)
+    res.setHeader(
+      'Set-Cookie',
+      serialize(process.env.COOKIE_NAME, jwt, { httpOnly: true, path: '/' })
+    )
     res.status(201)
-    res.json({ data: { token: jwt } })
+    res.end()
   } else {
     res.status(402)
     res.end()

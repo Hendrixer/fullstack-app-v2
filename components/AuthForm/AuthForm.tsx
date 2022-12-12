@@ -32,15 +32,15 @@ export default function AuthForm({ mode }: { mode: 'register' | 'signin' }) {
   const handleSubmit = useCallback(
     async (e) => {
       e.preventDefault()
-      let data
+
       try {
         if (mode === 'register') {
-          data = await register(formState)
+          await register(formState)
         } else {
-          data = await signin(formState)
+          await signin(formState)
         }
 
-        router.push('/')
+        router.replace('/')
       } catch (e) {
         setError(`Could not ${mode}`)
       } finally {
