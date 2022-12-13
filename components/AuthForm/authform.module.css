@@ -1,4 +1,5 @@
 .authform {
+  composes: glass from global;
   width: 600px;
   overflow: hidden;
 }
