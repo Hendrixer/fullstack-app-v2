@@ -1,4 +1,3 @@
-import styles from './sidebar.module.css'
 import {
   Home,
   Hash,
@@ -40,14 +39,14 @@ const links = [
 
 const Sidebar = () => {
   return (
-    <div className={styles.sidebar}>
+    <div>
       {links.map((link) => (
         <Link href={link.link}>
-          <div className={styles.link}>
-            <div className={styles.icon}>
+          <div>
+            <div>
               <link.Icon color="black" size={28} />
             </div>
-            <div className={styles.label}>{link.label}</div>
+            <div>{link.label}</div>
           </div>
         </Link>
       ))}

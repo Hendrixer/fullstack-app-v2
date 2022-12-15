@@ -1,8 +1,8 @@
-import 'css-reset-and-normalize'
 import '@/styles/global.css'
 import { Inter } from '@next/font/google'
-import styles from './dashboard.module.css'
-import Sidebar from '@/components/Sidebar/Sidebar'
+import Sidebar from '@/components/Sidebar'
+import clsx from 'clsx'
+import GlassPane from '@/components/GlassPane'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -10,18 +10,21 @@ const inter = Inter({
 
 export default function DashboardRootLayout({ children }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={clsx(inter.variable, 'dark')}>
       <head />
-      <body className={styles.body}>
-        <div className={styles.dashboard}>
-          <header className={styles.header}>header</header>
-          <div className={styles.container}>
-            <aside className={styles.sidebar}>
-              <Sidebar />
-            </aside>
-            <main className={styles.main}>{children}</main>
+      <body className="h-screen w-screen rainbow-mesh p-6">
+        <GlassPane className="w-full h-full flex items-center justify-center">
+          {children}
+          <div>
+            <header>header</header>
+            <div>
+              <aside>
+                <Sidebar />
+              </aside>
+              <main>{children}</main>
+            </div>
           </div>
-        </div>
+        </GlassPane>
       </body>
     </html>
   )

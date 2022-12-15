@@ -1,0 +1,20 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}', // Note the addition of the `app` directory.
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)'],
+      },
+      colors: {
+        midnight: 'rgb(18,18,18)',
+        night: 'rgb(30,30,30)',
+      },
+    },
+  },
+  plugins: [],
+}

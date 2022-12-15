@@ -1,9 +1,8 @@
-import AuthForm from '@/components/AuthForm/AuthForm'
-import styles from './signin.module.css'
+import AuthForm from '@/components/AuthForm'
 
 export default function Register() {
   return (
-    <div className={styles.signin}>
+    <div>
       <AuthForm mode="signin" />
     </div>
   )
