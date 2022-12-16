@@ -1,5 +1,3 @@
-// import { cookies } from 'next/headers'
-// import { db } from '@/lib/db'
 import { getUserFromCookie } from '@/lib/auth'
 import { cookies } from 'next/headers'
 import Button from './Button'
@@ -28,9 +26,12 @@ const Greetings = async () => {
       <div>
         <Button size="large">Today's Schedule</Button>
       </div>
-      <div className="absolute top-[-100px] right-0">
-        <Image src={img} alt="busy person on computer" className="w-96 " />
-      </div>
+
+      <Image
+        src={img}
+        alt="busy person on computer"
+        className="w-1/3 absolute top-[-50px] right-0"
+      />
     </Card>
   )
 }

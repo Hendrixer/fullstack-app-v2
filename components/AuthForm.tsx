@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import Card from './Card'
 import Button from './Button'
+import Input from './Input'
 
 const registerContent = {
   linkUrl: '/signin',
@@ -71,7 +72,7 @@ export default function AuthForm({ mode }: { mode: 'register' | 'signin' }) {
                 <div className="text-lg mb-4 ml-2 text-black/50">
                   First Name
                 </div>
-                <input
+                <Input
                   required
                   placeholder="First Name"
                   value={formState.firstName}
@@ -83,7 +84,7 @@ export default function AuthForm({ mode }: { mode: 'register' | 'signin' }) {
               </div>
               <div className="pl-2">
                 <div className="text-lg mb-4 ml-2 text-black/50">Last Name</div>
-                <input
+                <Input
                   required
                   placeholder="Last Name"
                   value={formState.lastName}
@@ -97,7 +98,7 @@ export default function AuthForm({ mode }: { mode: 'register' | 'signin' }) {
           )}
           <div className="mb-8">
             <div className="text-lg mb-4 ml-2 text-black/50">Email</div>
-            <input
+            <Input
               required
               type="email"
               placeholder="Email"
@@ -110,7 +111,7 @@ export default function AuthForm({ mode }: { mode: 'register' | 'signin' }) {
           </div>
           <div className="mb-8">
             <div className="text-lg mb-4 ml-2 text-black/50">Password</div>
-            <input
+            <Input
               required
               value={formState.password}
               type="password"
