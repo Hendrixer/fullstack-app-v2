@@ -4,6 +4,7 @@ import { useCallback, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import Card from './Card'
+import Button from './Button'
 
 const registerContent = {
   linkUrl: '/signin',
@@ -132,12 +133,9 @@ export default function AuthForm({ mode }: { mode: 'register' | 'signin' }) {
               </span>
             </div>
             <div>
-              <button
-                type="submit"
-                className="px-6 py-2 bg-violet-500 text-lg rounded-3xl text-white font-bold hover:scale-110 active:scale-100 transition duration-200 ease-in-out"
-              >
+              <Button type="submit" intent="secondary">
                 {content.buttonText}
-              </button>
+              </Button>
             </div>
           </div>
         </form>
