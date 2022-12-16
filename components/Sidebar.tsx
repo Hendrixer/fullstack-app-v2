@@ -1,56 +1,33 @@
-import {
-  Home,
-  Hash,
-  Bell,
-  Mail,
-  Bookmark,
-  List,
-  User,
-  MoreHorizontal,
-} from 'react-feather'
-import Link from 'next/link'
+import Card from './Card'
+import Image from 'next/image'
+import logo from '@/assets/images/logo.png'
+import SidebarLink from './SidebarLink'
 
 const links = [
-  { label: 'Home', Icon: (props) => <Home {...props} />, link: '/home' },
-  { label: 'Explore', Icon: (props) => <Hash {...props} />, link: '/explore' },
+  { label: 'Home', icon: 'Grid', link: '/home' },
   {
-    label: 'Notifications',
-    Icon: (props) => <Bell {...props} />,
-    link: '/notifications',
+    label: 'Calendar',
+    icon: 'Calendar',
+    link: '/calendar',
   },
+  { label: 'Profile', icon: 'User', link: '/profile' },
   {
-    label: 'Messages',
-    Icon: (props) => <Mail {...props} />,
-    link: '/messages',
-  },
-  {
-    label: 'Bookmarks',
-    Icon: (props) => <Bookmark {...props} />,
-    link: '/bookmarks',
-  },
-  { label: 'Lists', Icon: (props) => <List {...props} />, link: '/lists' },
-  { label: 'Profile', Icon: (props) => <User {...props} />, link: '/profile' },
-  {
-    label: 'More',
-    Icon: (props) => <MoreHorizontal {...props} />,
-    link: '/more',
+    label: 'Settings',
+    icon: 'Settings',
+    link: '/settings',
   },
 ]
 
 const Sidebar = () => {
   return (
-    <div>
+    <Card className="h-full w-40 flex items-center justify-between flex-wrap">
+      <div className="w-full flex justify-center items-center">
+        <Image src={logo} alt="Able logo" priority className="w-14" />
+      </div>
       {links.map((link) => (
-        <Link href={link.link}>
-          <div>
-            <div>
-              <link.Icon color="black" size={28} />
-            </div>
-            <div>{link.label}</div>
-          </div>
-        </Link>
+        <SidebarLink link={link} />
       ))}
-    </div>
+    </Card>
   )
 }
 

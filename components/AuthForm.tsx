@@ -4,6 +4,7 @@ import clsx from 'clsx'
 import { useCallback, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import Card from './Card'
 
 const registerContent = {
   linkUrl: '/signin',
@@ -57,7 +58,7 @@ export default function AuthForm({ mode }: { mode: 'register' | 'signin' }) {
   const content = mode === 'register' ? registerContent : signinContent
 
   return (
-    <div className="rounded-3xl px-10 py-4 drop-shadow-xl bg-white w-[600px] flex items-center justify-center">
+    <Card>
       <div className="w-full">
         <div className="text-center">
           <h2 className="text-3xl mb-2">{content.header}</h2>
@@ -138,6 +139,6 @@ export default function AuthForm({ mode }: { mode: 'register' | 'signin' }) {
           </div>
         </form>
       </div>
-    </div>
+    </Card>
   )
 }

@@ -21,6 +21,21 @@
     radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
 }
 
+.candy-mesh {
+  background-color: #a099ff;
+  background-image: radial-gradient(
+      at 50% 97%,
+      hsla(62, 92%, 77%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 15% 97%, hsla(211, 86%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 7% 50%, hsla(133, 86%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 32% 52%, hsla(201, 68%, 63%, 1) 0px, transparent 50%),
+    radial-gradient(at 40% 66%, hsla(151, 99%, 69%, 1) 0px, transparent 50%),
+    radial-gradient(at 39% 76%, hsla(240, 99%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 40% 77%, hsla(310, 96%, 75%, 1) 0px, transparent 50%);
+}
+
 .glass {
   backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(255, 255, 255, 0.4);

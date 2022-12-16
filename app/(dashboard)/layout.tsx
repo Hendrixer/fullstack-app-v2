@@ -12,18 +12,10 @@ export default function DashboardRootLayout({ children }) {
   return (
     <html lang="en" className={clsx(inter.variable, 'dark')}>
       <head />
-      <body className="h-screen w-screen rainbow-mesh p-6">
-        <GlassPane className="w-full h-full flex items-center justify-center">
-          {children}
-          <div>
-            <header>header</header>
-            <div>
-              <aside>
-                <Sidebar />
-              </aside>
-              <main>{children}</main>
-            </div>
-          </div>
+      <body className="h-screen w-screen candy-mesh p-6">
+        <GlassPane className="w-full h-full p-6 flex align-center container mx-auto">
+          <Sidebar />
+          <main>{children}</main>
         </GlassPane>
       </body>
     </html>
