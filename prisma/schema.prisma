@@ -17,33 +17,7 @@ model User {
   updatedAt DateTime @updatedAt
   email String  @unique
   password String
-  name  String?
-  posts Post[]
-  feed Feed?
-
-  followers User[]  @relation("UserFollows")
-  following  User[]  @relation("UserFollows")
+  firstName  String?
+  lastName String?
 }
 
-model Post {
-  id        Int     @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  senderId String
-  sender User @relation(references: [id], fields: [senderId], onDelete: Cascade, onUpdate: Cascade)
-  feeds Feed[]
-
-  content String @db.VarChar(220)
-}
-
-model Feed {
-  id        Int     @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  belongsToId String @unique
-  belongsTo User @relation(references: [id], fields: [belongsToId])
-
-  posts Post[]
-
-  @@index([belongsToId])
-}

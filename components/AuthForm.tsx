@@ -1,6 +1,5 @@
 'use client'
 import { register, signin } from '@/lib/api'
-import clsx from 'clsx'
 import { useCallback, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -67,27 +66,29 @@ export default function AuthForm({ mode }: { mode: 'register' | 'signin' }) {
         <form onSubmit={handleSubmit} className="py-10 w-full">
           {mode === 'register' && (
             <div className="flex mb-8 justify-between">
-              <div>
+              <div className="pr-2">
                 <div className="text-lg mb-4 ml-2 text-black/50">
                   First Name
                 </div>
                 <input
+                  required
                   placeholder="First Name"
-                  value={formState.email}
+                  value={formState.firstName}
                   className="border-solid border-gray border-2 px-6 py-2 text-lg rounded-3xl w-full"
                   onChange={(e) =>
-                    setFormState((s) => ({ ...s, email: e.target.value }))
+                    setFormState((s) => ({ ...s, firstName: e.target.value }))
                   }
                 />
               </div>
-              <div>
+              <div className="pl-2">
                 <div className="text-lg mb-4 ml-2 text-black/50">Last Name</div>
                 <input
+                  required
                   placeholder="Last Name"
-                  value={formState.email}
+                  value={formState.lastName}
                   className="border-solid border-gray border-2 px-6 py-2 text-lg rounded-3xl w-full"
                   onChange={(e) =>
-                    setFormState((s) => ({ ...s, email: e.target.value }))
+                    setFormState((s) => ({ ...s, lastName: e.target.value }))
                   }
                 />
               </div>
@@ -96,6 +97,7 @@ export default function AuthForm({ mode }: { mode: 'register' | 'signin' }) {
           <div className="mb-8">
             <div className="text-lg mb-4 ml-2 text-black/50">Email</div>
             <input
+              required
               type="email"
               placeholder="Email"
               value={formState.email}
@@ -108,6 +110,7 @@ export default function AuthForm({ mode }: { mode: 'register' | 'signin' }) {
           <div className="mb-8">
             <div className="text-lg mb-4 ml-2 text-black/50">Password</div>
             <input
+              required
               value={formState.password}
               type="password"
               placeholder="Password"

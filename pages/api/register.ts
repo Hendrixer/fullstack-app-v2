@@ -12,6 +12,8 @@ export default async function register(
       data: {
         email: req.body.email,
         password: await hashPassword(req.body.password),
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
       },
     })
 

@@ -8,7 +8,6 @@ const verifyJWT = async (jwt) => {
     new TextEncoder().encode(process.env.JWT_SECRET)
   )
 
-  // if its all good, return it, or perhaps just return a boolean
   return payload
 }
 
