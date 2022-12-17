@@ -39,3 +39,17 @@ export const signin = async (user) => {
     json: false,
   })
 }
+
+interface NewTask {
+  name: string
+  description: string
+  project: string
+}
+
+export const createNewTask = (task: NewTask) => {
+  return fetcher({
+    url: '/api/newtask',
+    method: 'POST',
+    body: task,
+  })
+}
