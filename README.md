@@ -2,7 +2,7 @@
 
 You'll need to have a few things
 
-- a Psql server running
+- a Psql DB server running
 - create a `.env` file and add the following
 
 ```env
@@ -11,7 +11,10 @@ JWT_SECRET=""
 COOKIE_NAME=""
 ```
 
-Now install deps and start the server
+You'll need to migrate your DB using prisma
+`npx prisma migrate dev`
+
+Now install deps and start the server.
 
 ```bash
 npm run dev
