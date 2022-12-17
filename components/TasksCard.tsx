@@ -1,5 +1,6 @@
 import { getUserFromCookie } from '@/lib/auth'
 import { db } from '@/lib/db'
+import { TASK_STATUS } from '@prisma/client'
 import { cookies } from 'next/headers'
 import Button from './Button'
 import Card from './Card'
@@ -9,7 +10,10 @@ const getData = async () => {
   const tasks = await db.task.findMany({
     where: {
       ownerId: user.id,
-      status: 'NOT_STARTED',
+      NOT: {
+        status: TASK_STATUS.COMPLETED,
+        deleted: false,
+      },
     },
     take: 5,
     orderBy: {
@@ -26,7 +30,7 @@ const TasksCard = async () => {
     <Card>
       <div className="flex justify-between items-center">
         <div>
-          <span className="text-2xl">My Tasks</span>
+          <span className="text-3xl text-gray-600">My Tasks</span>
         </div>
         <div>
           <Button intent="text" className="text-violet-600">
@@ -35,7 +39,24 @@ const TasksCard = async () => {
         </div>
       </div>
       <div>
-        {tasks && tasks.length ? <div>tasks here</div> : <div>no tasks</div>}
+        {tasks && tasks.length ? (
+          <div>
+            {tasks.map((task) => (
+              <div className="py-2 ">
+                <div>
+                  <span className="text-gray-800">{task.name}</span>
+                </div>
+                <div>
+                  <span className="text-gray-400 text-sm">
+                    {task.description}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div>no tasks</div>
+        )}
       </div>
     </Card>
   )

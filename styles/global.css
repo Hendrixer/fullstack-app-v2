@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  [data-nextjs-scroll-focus-boundary] {
+    display: contents;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -37,4 +43,8 @@
 .glass {
   backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(255, 255, 255, 0.4);
+}
+
+[data-nextjs-scroll-focus-boundary] {
+  display: contents;
 }
