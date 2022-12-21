@@ -37,6 +37,7 @@ model Project {
   deleted     Boolean   @default(false)
 
   @@unique([ownerId, name])
+  @@index([ownerId, id])
 }
 
 enum TASK_STATUS {

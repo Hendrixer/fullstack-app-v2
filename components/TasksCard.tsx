@@ -23,14 +23,14 @@ const getData = async () => {
 
   return tasks
 }
-const TasksCard = async () => {
-  const tasks = await getData()
+const TasksCard = async ({ title, tasks }) => {
+  const data = tasks || (await getData())
 
   return (
     <Card>
       <div className="flex justify-between items-center">
         <div>
-          <span className="text-3xl text-gray-600">My Tasks</span>
+          <span className="text-3xl text-gray-600">{title}</span>
         </div>
         <div>
           <Button intent="text" className="text-violet-600">
@@ -39,9 +39,9 @@ const TasksCard = async () => {
         </div>
       </div>
       <div>
-        {tasks && tasks.length ? (
+        {data && data.length ? (
           <div>
-            {tasks.map((task) => (
+            {data.map((task) => (
               <div className="py-2 ">
                 <div>
                   <span className="text-gray-800">{task.name}</span>

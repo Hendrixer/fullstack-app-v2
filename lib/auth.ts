@@ -9,7 +9,7 @@ export const comparePasswords = (plainTextPassword, hashedPassword) =>
 export const createJWT = (user) => {
   // return jwt.sign({ id: user.id }, 'cookies')
   const iat = Math.floor(Date.now() / 1000)
-  const exp = iat + 60 * 60 * 6
+  const exp = iat + 60 * 60 * 24 * 7
 
   return new SignJWT({ payload: { id: user.id, email: user.email } })
     .setProtectedHeader({ alg: 'HS256', typ: 'JWT' })
