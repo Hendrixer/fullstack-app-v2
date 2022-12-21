@@ -46,10 +46,10 @@ interface NewTask {
   project: string
 }
 
-export const createNewTask = (task: NewTask) => {
+export const createNewProject = (name) => {
   return fetcher({
-    url: '/api/newtask',
+    url: '/api/project',
     method: 'POST',
-    body: task,
+    body: { name },
   })
 }
